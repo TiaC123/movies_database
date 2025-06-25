@@ -1,5 +1,6 @@
 # Import necessary modules
-from flask import Flask, render_template, request, redirect, url_for, json, jsonify
+from flask import Flask, render_template, request, redirect, url_for, json
+import os
 from pymongo import MongoClient, errors
 import plotly.express as px
 from collections import Counter
@@ -42,7 +43,8 @@ def inject_image_base_url():
 def add_data():
     if request.method == 'POST':
         try:
-            with open('static/movies.json', 'r') as file:
+            file_path = os.path.join(app.root_path, 'static', 'movies.json')
+            with open(file_path, 'r') as file:
                 data = json.load(file)
 
             error_messages = []  # To store multiple error messages
