@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Movie Database{% endblock %}</title>
+
+    <!-- Bootstrap JS and jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- My Custom CSS -->
+  <link href="static/additionalStyling.css" rel="stylesheet">
+
+  <!-- Font Awesome Script -->
+  <script src="https://kit.fontawesome.com/cc41f52d10.js" crossorigin="anonymous"></script>
+
+  <!-- Font Resizing Script -->
+  <script>
+    function increaseFontSize() {
+      document.body.style.fontSize = "larger";
+    }
+
+    function decreaseFontSize() {
+      document.body.style.fontSize = "smaller";
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="/">Movie Database</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/view_data">
+                <i class="fas fa-film"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/latest_movies">
+                <i class="fa-solid fa-ticket"></i> Latest Movies
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/deconstruct_characters">
+                <i class="fas fa-users"></i> Latest Characters
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/view_reviews">
+                <i class="fas fa-comments"></i> Reviews
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Find Out More
+              </a>
+              <ul class="dropdown-menu multi-column" style="min-width: 30rem;">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h6>Movies</h6>
+                      <ul class="dropdown-item">
+                        <li><a class="dropdown-item" href="/add_movies">Add a Movie</a></li>
+                        <li><a class="dropdown-item" href="/filter_movies">Filter Movies</a></li>
+                        <li><a class="dropdown-item" href="/find_title_elements">Search Movies</a></li>
+                        <li><a class="dropdown-item" href="/map_reduce">Movies Shown Per Country</a></li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <h6>Characters</h6>
+                      <ul class="dropdown-item">
+                        <li><a class="dropdown-item" href="/compare_characters">Compare Characters</a></li>
+                        <li><a class="dropdown-item" href="/deconstruct_characters">Deconstruct Characters</a></li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <h6>Cinemas</h6>
+                      <ul class="dropdown-item">
+                        <li><a class="dropdown-item" href="/popular_cinemas">Popular Cinemas</a></li>
+                        <li><a class="dropdown-item" href="/amenities">Cinema Amenities</a></li>
+                        <li><a class="dropdown-item" href="/movies_by_cinema">View Movies by Cinema</a></li>
+                        <li><a class="dropdown-item" href="/transform_data">Average Earnings Per Cinema</a></li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <h6>Other</h6>
+                      <ul class="dropdown-item">
+                        <li><a class="dropdown-item" href="/conditional_update">Conditional Update</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+          </ul>
+          <!-- Font Resizing Icons -->
+          <div class="navbar-right">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button class="btn" onclick="decreaseFontSize()">
+                  <i class="fa-solid fa-magnifying-glass-minus"></i>
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="btn" onclick="increaseFontSize()">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+  </main>
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-body-secondary">&copy; Movies Database, 2023</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-body-secondary" href="www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="ms-3"><a class="text-body-secondary" href="www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="www.snapchat.com"><i class="fab fa-snapchat"></i></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="www.tiktok.com"><i class="fab fa-tiktok"></i></a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+  {% block footer %}
+  {% endblock %}
+
+  <a href="#" class="scroll-to-top rounded" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+</body>
+
+</html>

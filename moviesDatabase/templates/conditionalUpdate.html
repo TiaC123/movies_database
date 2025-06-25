@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Conditional Update</h2>
+    <p>This feature updates all characters who appeared in the movies "Iron Man" and "The Incredible Hulk" by adding a new movie called "Spinoff Show". </p>
+    <p>Along with that, high performing cinemas in Paris with monthly sales greater than 50000 will get an increase of 5 employees.</p>
+    <form method="post">
+        <input type="submit" class="btn btn-danger" value="Perform Conditional Update">
+    </form>
+    <div id="updateResult">
+        {% if message %}
+        <div class="alert alert-success mt-3" role="alert">
+            {{ message }}
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

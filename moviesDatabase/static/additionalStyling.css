@@ -1,0 +1,107 @@
+/* For body background image */
+body {
+    background-image: url('path_to_your_image.jpg');
+    /* Add your image path here */
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Apply the floating animation to the image */
+.floating-image {
+    animation: floating 3s infinite;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    background-color: #DC3545;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.scroll-to-top i {
+    line-height: 40px;
+}
+
+/* Show the button when scrolled */
+@media (min-width: 768px) {
+    .scroll-to-top {
+        right: 50px;
+        bottom: 50px;
+        display: block;
+    }
+}
+
+/* Changing color of .fab icons when hovered over within elements with class .text-body-secondary */
+.text-body-secondary:hover .fab {
+    color: #DC3545;
+}
+
+/* Changing color of the navbar brand */
+.navbar-brand {
+    color: #DC3545;
+    /* Default color */
+}
+
+.fa-magnifying-glass-plus,
+.fa-magnifying-glass-minus {
+    color: #DC3545;
+}
+
+.movie-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.movie-card {
+    position: relative;
+}
+
+.reviews{
+    margin-bottom: 20px; /* Space between reviews */
+}
+
+.reviews-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.reviews-list {
+    overflow-y: auto; /* Enable scrolling within the reviews */
+}
+
+.movie-card:hover .reviews-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form-check-input:checked {
+    background-color: red;
+    border-color: red;
+}
+
+.pie-chart {
+    max-width: 100%; 
+    height: auto;
+}

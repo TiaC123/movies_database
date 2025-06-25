@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1>Deconstructed Characters</h1>
+    <div id="dataDisplay">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-danger">
+                    <th>Movie Title</th>
+                    <th>Character</th>
+                    <th>Release Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in result %}
+                <tr>
+                    <td>{{ item.movie_title }}</td>
+                    <td>{{ item.character }}</td>
+                    <td>{{ item.releaseYear }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div>
+        {{ character_chart_html|safe }}
+    </div>
+</div>
+{% endblock %}

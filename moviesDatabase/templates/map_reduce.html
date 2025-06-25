@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Map Reduce Results - Movies Shown per Country</h2>
+    <p>This table shows the number of movies shown in each country. The pie chart below then shows the percentage of movies shown per country.</p>
+    <table class="table table-bordered">
+        <tr class="table-danger">
+            <th scope="col">Country</th>
+            <th scope="col">Movies Shown</th>
+        </tr>
+        <tbody>
+            {% for data in country_data %}
+            <tr>
+                <td>{{ data['country'] }}</td>
+                <td>{{ data['total_movies'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Display the pie chart image -->
+    <div class="text-center">
+        <img class="pie-chart" src="data:image/png;base64,{{ plot_url }}" alt="Pie Chart">
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Home - Movie Database{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row align-items-stretch">
+        <div class="col-lg-6 text-center d-flex align-items-center">
+            <div>
+                <h1>Welcome to the Movie Database!</h1>
+                <p class="lead">Discover, organise, and explore your favorite movies!</p>
+                <p class="mb-4">Our database allows you to manage your movies with ease.
+                    Here, you can create, read, update, and delete your dataset. </p>
+                <p class="mb-4">There's also additional functionality waiting to be used! Search, filter, and compare
+                    - there's no time to lose!</p>
+                <form action="/" method="POST">
+                    <input type="submit" class="btn btn-danger btn-lg" value="Import Movies">
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <img src="/static/popcorn_icon.png" alt="Popcorn Icon" class="img-fluid rounded floating-image">
+        </div>
+    </div>
+</div>
+<div>
+    &nbsp;
+    <!-- Check if there are error messages to display -->
+    {% if message %}
+    <table class="table table-bordered">
+        <!-- Table headers for error type and error message -->
+        <tr>
+            <th>Error Type</th>
+            <th>Error Message</th>
+        </tr>
+        <!-- Loop through the error messages -->
+        {% for error in message %}
+        <!-- Display each error type and error message in a table row -->
+        <tr>
+            <td>{{ error[0] }}</td> <!-- Error Type -->
+            <td>{{ error[1] }}</td> <!-- Error Message -->
+        </tr>
+        {% endfor %}
+    </table>
+    <!-- End of error messages display -->
+    {% endif %}
+</div>
+{% endblock %}

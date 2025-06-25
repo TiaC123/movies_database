@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="my-4">Movie Details with Cinema Info</h2>
+    <p>Below is a display of Movies, their Characters and Cinema information based on where that specific movie is shown.</p>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for movie in movies %}
+        <div class="col">
+            <div class="card h-100 border-danger mb-3">
+                <img src="{{ IMAGE_BASE_URL }}{{ movie.image_filename }}" class="card-img-top movie-image" alt="{{ movie.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <p class="card-text">
+                        <strong>Characters:</strong> {{ movie.characters|join(', ') }}
+                    </p>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        {% for cinema in movie.cinema_details %}
+                        <div class="col">
+                            <div class="cinema-info">
+                                <h6 class="mt-3">{{ cinema.cinema_name }}</h6>
+                                <p>
+                                    <strong>Employees:</strong> {{ cinema.employees }}<br>
+                                    <strong>Monthly Sales:</strong> {{ cinema.monthly_sales }}<br>
+                                    <strong>Location:</strong> {{ cinema.location.city }}, {{ cinema.location.country }}<br>
+                                    <strong>Amenities:</strong> {{ cinema.amenities|join(', ') }}
+                                </p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

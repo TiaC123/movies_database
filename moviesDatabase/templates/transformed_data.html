@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Average Box Office Earnings per Cinema Location</h2>
+    <p>Visualise the distribution of box office earnings across different locations in the table below.</p>
+    <div id="dataDisplay">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-danger">
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Year</th>
+                    <th>Average Box Office Earnings</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in transformed_data %}
+                <tr>
+                    <td>{{ item._id.city }}</td>
+                    <td>{{ item._id.country }}</td>
+                    <td>{{ item._id.year }}</td>
+                    <td>£{{ '%.2f'|format(item.averageBoxOffice) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <h3>View Earnings As a Pie Chart</h3>
+    <!-- Display Pie Chart -->
+    <div class="text-center">
+        <img class="pie-chart" src="data:image/png;base64,{{ plot_url }}" alt="Pie Chart">
+    </div>
+</div>
+{% endblock %}

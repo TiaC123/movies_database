@@ -1,0 +1,38 @@
+<div class="container mt-4">
+    <h2>Find Cinemas by Amenities</h2>
+    <form action="/amenities" method="GET" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="amenityInput">Select Amenities:</label><br>
+            {% for cinema in amenities %}
+                {% for amenity in cinema.amenities %}
+                    <input type="checkbox" id="amenity_{{ amenity }}" name="amenity" value="{{ amenity }}">
+                    <label for="amenity_{{ amenity }}">{{ amenity }}</label><br>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    {% if amenities %}
+        <h3 class="mt-4">Cinemas with the specified amenities:</h3>
+        <ul class="list-group">
+            {% for cinema in amenities %}
+                <li class="list-group-item">{{ cinema.id }} - {{ cinema.location.city }}, {{ cinema.location.country }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="mt-4">No cinemas found for the specified amenities.</p>
+    {% endif %}
+</div>
+</div>
+
+<script>
+function validateForm() {
+    const checkboxes = document.querySelectorAll('input[name="amenity"]:checked');
+    if (checkboxes.length < 2) {
+        alert("Please select at least two amenities.");
+        return false;
+    }
+    return true;
+}
+</script>

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Thrilling Reviews</h2>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <p>Here are the "Thrilling" reviews in our database.</p>
+        <a href="/view_reviews" class="btn btn-danger btn-md">All Reviews</a>
+    </div>
+    <div id="dataDisplay" class="row">
+        {% for movie in thrilling_reviews %}
+        <div class="col-md-3 mb-3">
+            <div class="movie-card h-100">
+                <img src="{{ IMAGE_BASE_URL }}{{ movie.image_filename }}" class="movie-image" alt="{{ movie.title }}">
+                <div class="reviews-overlay">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                    <div class="reviews-list">
+                        {% for review in movie.reviews %}
+                        <div class="review">
+                            <p><strong>Review {{ loop.index }}:</strong><br>
+                            <em>Stars:</em> {{ review.stars }}<br>
+                            <em>Recommend:</em> {{ review.recommend }}<br>
+                            <em>Comment:</em> {{ review.comment }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    const movieCards = document.querySelectorAll('.movie-card');
+
+    movieCards.forEach((card) => {
+        card.addEventListener('mouseenter', () => {
+            card.querySelector('.reviews-overlay').style.display = 'block';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.querySelector('.reviews-overlay').style.display = 'none';
+        });
+    });
+</script>
+{% endblock %}

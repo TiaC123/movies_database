@@ -1,0 +1,826 @@
+{
+  "movies": [
+    {
+      "title": "Iron Man",
+      "releaseYear": 2008,
+      "characters": [
+        "Iron Man",
+        "Pepper Potts",
+        "Rhodey"
+      ],
+      "image_filename": "MoviesIronman.jpg",
+      "boxOffice": 585000000,
+      "runtime": 126,
+      "cinema_id": ["CIN1", "CIN7"],
+      "director": "Jon Favreau",
+      "producers": [
+        "Jon Favreau",
+        "Kevin Feige",
+        "Louis D'Esposito"
+      ],
+      "category": [
+        "Superhero",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "reviews": [
+        {
+          "stars": 2,
+          "recommend": "No",
+          "comment": "Hard to follow, would not watch again!"
+        },
+        {
+          "stars": 1,
+          "recommend": "No",
+          "comment": "Poorly made, disappointing!"
+        },
+        {
+          "stars": 4,
+          "recommend": "Yes",
+          "comment": "Absolutely thrilling! Loved it!"
+        }
+      ]
+    },
+    {
+      "title": "The Incredible Hulk",
+      "releaseYear": 2008,
+      "characters": [
+        "Hulk",
+        "General Thaddeus Ross"
+      ],
+      "image_filename": "MoviesHulk.jpeg",
+      "boxOffice": 264000000,
+      "runtime": 112,
+      "cinema_id": ["CIN2", "CIN10"],
+      "director": "Louis Leterrier",
+      "producers": [
+        "Gale Anne Hurd",
+        "Kevin Feige"
+      ],
+      "category": [
+        "Superhero",
+        "Adventure",
+        "Character Drama"
+      ],
+      "reviews": [
+        {
+          "stars": 4,
+          "recommend": "Yes",
+          "comment": "Thrilling action sequences and a captivating storyline made this a fantastic watch!"
+        },
+        {
+          "stars": 5,
+          "recommend": "Yes",
+          "comment": "Absolutely amazing! Hulk smash!"
+        },
+        {
+          "stars": 2,
+          "recommend": "No",
+          "comment": "Lacked depth, not a fan!"
+        }
+      ]
+    },
+    {
+      "title": "Iron Man 2",
+      "releaseYear": 2010,
+      "characters": [
+        "Iron Man",
+        "Black Widow",
+        "War Machine"
+      ],
+      "image_filename": "MoviesIronman2.jpeg",
+      "boxOffice": 624000000,
+      "runtime": 124,
+      "cinema_id": ["CIN1", "CIN3"],
+      "director": "Jon Favreau",
+      "producers": [
+        "Jon Favreau",
+        "Kevin Feige",
+        "Louis D'Esposito"
+      ],
+      "category": [
+        "Superhero",
+        "Crossover",
+        "Adventure"
+      ],
+      "reviews": [
+        {
+          "stars": 5,
+          "recommend": "Yes",
+          "comment": "Action-packed and full of suspense. Loved every minute of it!"
+        },
+        {
+          "stars": 4,
+          "recommend": "Yes",
+          "comment": "Incredible sequel! A must-watch!"
+        },
+        {
+          "stars": 3,
+          "recommend": "Yes",
+          "comment": "Good but not great, had its moments."
+        }
+      ]
+    },
+    {
+      "title": "Thor",
+      "releaseYear": 2011,
+      "characters": [
+        "Thor",
+        "Jane Foster",
+        "Loki"
+      ],
+      "image_filename": "MoviesThor.jpg",
+      "boxOffice": 449000000,
+      "runtime": 114,
+      "cinema_id": ["CIN1", "CIN5"],
+      "director": "Kenneth Branagh",
+      "producers": [
+        "Kevin Feige",
+        "Louis D'Esposito",
+        "Alan Fine"
+      ],
+      "category": [
+        "Superhero",
+        "Comedy",
+        "Historical Fiction"
+      ],
+      "reviews": [
+        {
+          "stars": 4,
+          "recommend": "Yes",
+          "comment": "A thrilling mix of humor and epic storytelling!"
+        },
+        {
+          "stars": 3,
+          "recommend": "Yes",
+          "comment": "Enjoyable but could've been better paced."
+        },
+        {
+          "stars": 5,
+          "recommend": "Yes",
+          "comment": "Absolutely fantastic! Loved every moment!"
+        }
+      ]
+    },
+    {
+      "title": "Captain America: The First Avenger",
+      "releaseYear": 2011,
+      "characters": [
+        "Captain America",
+        "Red Skull",
+        "Bucky Barnes"
+      ],
+      "image_filename": "MoviesCaptainAmericaFirstAvenger.jpeg",
+      "boxOffice": 370600000,
+      "runtime": 124,
+      "cinema_id": ["CIN3", "CIN9"],
+      "director": "Joe Johnston",
+      "producers": [
+        "Kevin Feige",
+        "Louis D'Esposito",
+        "Alan Fine"
+      ],
+      "category": [
+        "Superhero",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "reviews": [
+        {
+          "stars": 4,
+          "recommend": "Yes",
+          "comment": "A great origin story, captivating from start to finish!"
+        },
+        {
+          "stars": 3,
+          "recommend": "Yes",
+          "comment": "Decent watch, but lacked depth."
+        },
+        {
+          "stars": 2,
+          "recommend": "No",
+          "comment": "Not my cup of tea, too much patriotism."
+        }
+      ]
+    },
+    {
+      "title": "The Avengers",
+      "releaseYear": 2012,
+      "characters": [
+        "Iron Man",
+        "Captain America",
+        "Hulk",
+        "Thor",
+        "Black Widow",
+        "Hawkeye"
+      ],
+      "image_filename": "MoviesTheAvengers.jpeg",
+      "boxOffice": 1518400000,
+      "runtime": 143,
+      "cinema_id": ["CIN2", "CIN5"],
+      "director": "Joss Whedon",
+      "producers": [
+        "Kevin Feige",
+        "Louis D'Esposito",
+        "Alan Fine",
+        "Jon Favreau"
+      ],
+      "category": [
+        "Superhero",
+        "Crossover",
+        "Adventure"
+      ],
+      "reviews": [
+        {
+          "stars": 5,
+          "recommend": "Yes",
+          "comment": "Epic team-up, pure thrilling entertainment throughout!"
+        },
+        {
+          "stars": 4,
+          "recommend": "Yes",
+          "comment": "Great action and chemistry among the superheroes!"
+        },
+        {
+          "stars": 3,
+          "recommend": "Yes",
+          "comment": "Good but a bit too lengthy."
+        }
+      ]
+    },
+    {
+      "title": "Iron Man 3",
+      "releaseYear": 2013,
+      "characters": [
+        "Iron Man",
+        "Pepper Potts",
+        "War Machine"
+      ],
+      "image_filename": "MoviesIronman3.jpeg",
+      "boxOffice": 1408400000,
+      "runtime": 130,
+      "cinema_id": ["CIN4", "CIN10"],
+      "director": "Shane Black",
+      "producers": [
+        "Kevin Feige",
+        "Louis D'Esposito"
+      ],
+      "category": [
+        "Superhero",
+        "Character Drama",
+        "Events"
+      ],
+      "reviews": [
+        {
+          "stars": 4,
+          "recommend": "Yes",
+          "comment": "Emotionally gripping, great character development!"
+        },
+        {
+          "stars": 5,
+          "recommend": "Yes",
+          "comment": "Absolutely loved it! Action-packed and thrilling!"
+        },
+        {
+          "stars": 3,
+          "recommend": "Yes",
+          "comment": "Good but lacked the wow factor."
+        }
+      ]
+    },
+    {
+      "title": "Thor: The Dark World",
+      "releaseYear": 2013,
+      "characters": [
+        "Thor",
+        "Jane Foster",
+        "Loki"
+      ],
+      "image_filename": "MoviesThorDarkWorld.jpeg",
+      "boxOffice": 644000000,
+      "runtime": 112,
+      "cinema_id": ["CIN1", "CIN2"],
+      "director": "Alan Taylor",
+      "producers": [
+        "Kevin Feige",
+        "Louis D'Esposito",
+        "Victoria Alonso"
+      ],
+      "category": [
+        "Superhero",
+        "Coming of Age",
+        "Romance"
+      ],
+      "reviews": [
+        {
+          "stars": 3,
+          "recommend": "Yes",
+          "comment": "Entertaining, but could have been better paced."
+        },
+        {
+          "stars": 4,
+          "recommend": "Yes",
+          "comment": "Entertaining, loved Loki's role!"
+        },
+        {
+          "stars": 2,
+          "recommend": "No",
+          "comment": "Too much focus on romance, not enough action."
+        }
+      ]
+    },
+    {
+      "title": "Captain America: The Winter Soldier",
+      "releaseYear": 2014,
+      "characters": [
+        "Captain America",
+        "Black Widow",
+        "Falcon"
+      ],
+      "image_filename": "MoviesCaptainAmericaWinterSoldier.jpeg",
+      "boxOffice": 715729193,
+      "runtime": 136,
+      "cinema_id": ["CIN4", "CIN6"],
+      "director": "Anthony Russo, Joe Russo",
+      "producers": [
+        "Kevin Feige",
+        "Louis D'Esposito"
+      ],
+      "category": [
+        "Superhero",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "reviews": [
+        {
+          "stars": 5,
+          "recommend": "Yes",
+          "comment": "Intense, great action sequences!"
+        },
+        {
+          "stars": 4,
+          "recommend": "Yes",
+          "comment": "Amazing storyline and character development!"
+        },
+        {
+          "stars": 3,
+          "recommend": "Yes",
+          "comment": "Good but slightly predictable."
+        }
+      ]
+    },
+    {
+      "title": "Guardians of the Galaxy",
+      "releaseYear": 2014,
+      "characters": [
+        "Star Lord",
+        "Gamora",
+        "Drax",
+        "Rocket",
+        "Groot"
+      ],
+      "image_filename": "MoviesGuardiansGalaxy.jpg",
+      "boxOffice": 773000000,
+      "runtime": 121,
+      "cinema_id": ["CIN1", "CIN10"],
+      "director": "James Gunn",
+      "producers": [
+        "Kevin Feige",
+        "Jonathan Schwartz"
+      ],
+      "category": [
+        "Superhero",
+        "Science Fiction",
+        "Comedy"
+      ],
+      "reviews": [
+        {
+          "stars": 2,
+          "recommend": "No",
+          "comment": "Lacked storyline, a bad take on the superhero genre!"
+        },
+        {
+          "stars": 3,
+          "recommend": "Yes",
+          "comment": "Fun, but didn't live up to the hype."
+        },
+        {
+          "stars": 4,
+          "recommend": "Yes",
+          "comment": "Hilarious and action-packed, loved it!"
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "Tony Stark/Iron Man",
+      "movies": [
+        "Iron Man",
+        "Iron Man 2",
+        "Iron Man 3",
+        "Avengers",
+        "Avengers: Age of Ultron",
+        "Captain America: Civil War",
+        "Spider-Man: Homecoming",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ],
+      "appearances": 9,
+      "image_filename": "characterIronMan.jpg"
+    },
+    {
+      "name": "Bruce Banner/Hulk",
+      "movies": [
+        "The Incredible Hulk",
+        "Avengers",
+        "Avengers: Age of Ultron",
+        "Thor: Ragnarok",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ],
+      "appearances": 6,
+      "image_filename": "characterHulk.jpeg"
+    },
+    {
+      "name": "Steve Rogers/Captain America",
+      "movies": [
+        "Captain America: The First Avenger",
+        "Avengers",
+        "Captain America: The Winter Soldier",
+        "Avengers: Age of Ultron",
+        "Ant-Man",
+        "Captain America: Civil War",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ],
+      "appearances": 8,
+      "image_filename": "characterCaptainAmerica.jpg"
+    },
+    {
+      "name": "Thor",
+      "movies": [
+        "Thor",
+        "Avengers",
+        "Thor: The Dark World",
+        "Avengers: Age of Ultron",
+        "Thor: Ragnarok",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ],
+      "appearances": 7,
+      "image_filename": "characterThor.jpg"
+    },
+    {
+      "name": "Natasha Romanoff/Black Widow",
+      "movies": [
+        "Iron Man 2",
+        "Avengers",
+        "Captain America: The Winter Soldier",
+        "Avengers: Age of Ultron",
+        "Captain America: Civil War",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ],
+      "appearances": 7,
+      "image_filename": "characterBlackWidow.jpg"
+    },
+    {
+      "name": "Clint Barton/Hawkeye",
+      "movies": [
+        "Thor",
+        "Avengers",
+        "Avengers: Age of Ultron",
+        "Captain America: Civil War",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ],
+      "appearances": 6,
+      "image_filename": "characterHawkeye.jpg"
+    },
+    {
+      "name": "Nick Fury",
+      "movies": [
+        "Iron Man",
+        "Iron Man 2",
+        "Thor",
+        "Captain America: The First Avenger",
+        "Avengers",
+        "Captain America: The Winter Soldier",
+        "Avengers: Age of Ultron"
+      ],
+      "appearances": 7,
+      "image_filename": "characterNickFury.webp"
+    },
+    {
+      "name": "Loki",
+      "movies": [
+        "Thor",
+        "Avengers",
+        "Thor: The Dark World",
+        "Avengers: Infinity War"
+      ],
+      "appearances": 4,
+      "image_filename": "characterLoki.jpg"
+    },
+    {
+      "name": "Peter Parker/Spider-Man",
+      "movies": [
+        "Captain America: Civil War",
+        "Spider-Man: Homecoming",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ],
+      "appearances": 4,
+      "image_filename": "characterSpiderMan.jpg"
+    },
+    {
+      "name": "Scott Lang/Ant-Man",
+      "movies": [
+        "Ant-Man",
+        "Captain America: Civil War",
+        "Ant-Man and the Wasp"
+      ],
+      "appearances": 3,
+      "image_filename": "characterAntman.jpeg"
+    }
+  ],
+  "directors": [
+    {
+      "name": "Jon Favreau",
+      "filmsDirected": [
+        "Iron Man",
+        "Iron Man 2"
+      ],
+      "image_filename": "directorJon.jpg"
+    },
+    {
+      "name": "Louis Leterrier",
+      "filmsDirected": [
+        "The Incredible Hulk"
+      ],
+      "image_filename": "directorLouis.jpg"
+    },
+    {
+      "name": "Kenneth Branagh",
+      "filmsDirected": [
+        "Thor"
+      ],
+      "image_filename": "directorKenneth.webp"
+    },
+    {
+      "name": "Joe Johnston",
+      "filmsDirected": [
+        "Captain America: The First Avenger"
+      ],
+      "image_filename": "directorJoe.jpg"
+    },
+    {
+      "name": "Joss Whedon",
+      "filmsDirected": [
+        "Avengers",
+        "Avengers: Age of Ultron"
+      ],
+      "image_filename": "directorJoss.jpeg"
+    },
+    {
+      "name": "Shane Black",
+      "filmsDirected": [
+        "Iron Man 3"
+      ],
+      "image_filename": "directorShane.png"
+    },
+    {
+      "name": "Alan Taylor",
+      "filmsDirected": [
+        "Thor: The Dark World"
+      ],
+      "image_filename": "directorAlan.jpeg"
+    },
+    {
+      "name": "Anthony Russo, Joe Russo",
+      "filmsDirected": [
+        "Captain America: The Winter Soldier",
+        "Captain America: Civil War",
+        "Avengers: Infinity War",
+        "Avengers: Endgame"
+      ],
+      "image_filename": "directorAnthonyJoe.jpg"
+    },
+    {
+      "name": "James Gunn",
+      "filmsDirected": [
+        "Guardians of the Galaxy",
+        "Guardians of the Galaxy Vol. 2"
+      ],
+      "image_filename": "directorJames.jpeg"
+    },
+    {
+      "name": "Peyton Reed",
+      "filmsDirected": [
+        "Ant-Man",
+        "Ant-Man and the Wasp"
+      ],
+      "image_filename": "directorPeyton.jpeg"
+    }
+  ],
+  "cinemas": [
+    {
+      "cinema_name": "CIN1",
+      "employees": 15,
+      "monthly_sales": 45000,
+      "image_filename": "CinemasCin1.png",
+      "movies_shown": [
+        "Iron Man",
+        "Thor: The Dark World",
+        "Guardians of the Galaxy"
+      ],
+      "location": {
+        "city": "Paris",
+        "country": "France"
+      },
+      "amenities": [
+        "Arcade",
+        "3D Screens",
+        "Bar"
+      ]
+    },
+    {
+      "cinema_name": "CIN2",
+      "employees": 12,
+      "monthly_sales": 57000,
+      "image_filename": "CinemasCin2.png",
+      "movies_shown": [
+        "The Avengers",
+        "Captain America: The Winter Soldier",
+        "Thor"
+      ],
+      "location": {
+        "city": "London",
+        "country": "UK"
+      },
+      "amenities": [
+        "3D Screens",
+        "Karaoke Booths",
+        "Cafe"
+      ]
+    },
+    {
+      "cinema_name": "CIN3",
+      "employees": 18,
+      "monthly_sales": 50000,
+      "image_filename": "CinemasCin3.png",
+      "movies_shown": [
+        "Iron Man 2",
+        "Captain America: The First Avenger"
+      ],
+      "location": {
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "amenities": [
+        "3D Screens",
+        "Arcade",
+        "Cafe"
+      ]
+    },
+    {
+      "cinema_name": "CIN4",
+      "employees": 20,
+      "monthly_sales": 52000,
+      "image_filename": "CinemasCin4.png",
+      "movies_shown": [
+        "Iron Man 3",
+        "Thor"
+      ],
+      "location": {
+        "city": "London",
+        "country": "UK"
+      },
+      "amenities": [
+        "Arcade",
+        "Karaoke Booths",
+        "Bar"
+      ]
+    },
+    {
+      "cinema_name": "CIN5",
+      "employees": 14,
+      "monthly_sales": 30000,
+      "image_filename": "CinemasCin5.png",
+      "movies_shown": [
+        "Thor: Ragnarok",
+        "Spider-Man: Homecoming",
+        "The Avengers"
+      ],
+      "location": {
+        "city": "Paris",
+        "country": "France"
+      },
+      "amenities": [
+        "Karaoke Booths",
+        "Bar",
+        "Luxury Seating"
+      ]
+    },
+    {
+      "cinema_name": "CIN6",
+      "employees": 16,
+      "monthly_sales": 47000,
+      "image_filename": "CinemasCin6.png",
+      "movies_shown": [
+        "Avengers: Age of Ultron",
+        "Ant-Man",
+        "Captain America: The Winter Soldier"
+      ],
+      "location": {
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "amenities": [
+        "Arcade",
+        "3D Screens",
+        "Luxury Seating"
+      ]
+    },
+    {
+      "cinema_name": "CIN7",
+      "employees": 19,
+      "monthly_sales": 53000,
+      "image_filename": "CinemasCin7.png",
+      "movies_shown": [
+        "Doctor Strange",
+        "Black Panther",
+        "Iron Man"
+      ],
+      "location": {
+        "city": "Paris",
+        "country": "France"
+      },
+      "amenities": [
+        "Luxury Seating",
+        "Bar",
+        "Arcade"
+      ]
+    },
+    {
+      "cinema_name": "CIN8",
+      "employees": 17,
+      "monthly_sales": 49000,
+      "image_filename": "CinemasCin8.png",
+      "movies_shown": [
+        "Captain Marvel",
+        "Ant-Man and the Wasp"
+      ],
+      "location": {
+        "city": "Sydney",
+        "country": "Australia"
+      },
+      "amenities": [
+        "Bar",
+        "Karaoke Booths",
+        "Arcade"
+      ]
+    },
+    {
+      "cinema_name": "CIN9",
+      "employees": 22,
+      "monthly_sales": 60000,
+      "image_filename": "CinemasCin9.png",
+      "movies_shown": [
+        "Guardians of the Galaxy Vol. 2",
+        "Black Widow",
+        "Captain America: The First Avenger"
+      ],
+      "location": {
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "amenities": [
+        "Arcade",
+        "Bar",
+        "3D Screens"
+      ]
+    },
+    {
+      "cinema_name": "CIN10",
+      "employees": 21,
+      "monthly_sales": 58000,
+      "image_filename": "CinemasCin10.png",
+      "movies_shown": [
+        "The Incredible Hulk",
+        "Guardians of the Galaxy",
+        "Iron Man 3"
+      ],
+      "location": {
+        "city": "Sydney",
+        "country": "Australia"
+      },
+      "amenities": [
+        "Luxury Seating",
+        "Arcade",
+        "Bar"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-4">
+    {% if message %}
+    <div class="alert alert-success" role="alert">
+        {{ message }}
+    </div>
+    {% endif %}
+    <!-- Movie Carousel -->
+    <div class="mb-5">
+        <div class="row">
+            <div class="col-md-10"> <!-- Split the container into three columns -->
+                <h2>Movies</h2>
+                <p>Explore our collection of movies:</p>
+            </div>
+            <div class="col-md-1">
+                <a href="/filter_movies" class="btn btn-danger btn-lg">Filter </a>
+            </div>
+            <div class="col-md-1">
+                <a href="/add_movies" class="btn btn-danger btn-lg">
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+            </div>
+        </div>
+        <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                {% for index in range(0, movies_data|length, 3) %}
+                <div class="carousel-item {% if index == 0 %}active{% endif %}">
+                    <div class="row">
+                        {% for movie in movies_data[index:index+3] %}
+                        <div class="col-md-4">
+                            <!-- Movie Card -->
+                            <div class="card h-100 border-1 rounded shadow">
+                                <!-- Movie Image -->
+                                <img src="{{ IMAGE_BASE_URL }}{{ movie.image_filename }}" alt="{{ movie.title }}"
+                                    class="card-img-top movie-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ movie.title }}</h5>
+                                    <p class="card-text"><strong>Release Year:</strong> {{ movie.releaseYear }}</p>
+                                    <p class="card-text"><strong>Characters:</strong> {{ movie.characters | join(', ')}}
+                                    </p>
+                                    <p class="card-text"><strong>Runtime:</strong> {{ movie.runtime }} mins</p>
+                                    <p class="card-text"><strong>Category:</strong> {{ movie.category | join(', ') }}
+                                    </p>
+                                    <p class="card-text"><strong>Producers:</strong> {{ movie.producers | join(', ') }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Character Carousel -->
+    <div class="mb-5">
+        <h2>Characters</h2>
+        <p>Discover the diverse characters:</p>
+        <div id="characterCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                {% for index in range(0, characters_data|length, 3) %}
+                <div class="carousel-item {% if index == 0 %}active{% endif %}">
+                    <div class="row">
+                        {% for character in characters_data[index:index+3] %}
+                        <div class="col-md-4">
+                            <!-- Character Card -->
+                            <div class="card h-100 border-1 rounded shadow">
+                                <!-- Character Image -->
+                                <img src="{{ IMAGE_BASE_URL }}{{ character.image_filename }}" alt="{{ character.name }}"
+                                    class="card-img-top movie-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ character.name }}</h5>
+                                    <p class="card-text"><strong>Movies:</strong> {{ character.movies | join(', ') }}
+                                    </p>
+                                    <p class="card-text"><strong>Appearances:</strong> {{ character.appearances }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Director Carousel -->
+    <div>
+        <h2>Directors</h2>
+        <p>Meet the visionary directors:</p>
+        <div id="directorCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                {% for index in range(0, directors_data|length, 3) %}
+                <div class="carousel-item {% if index == 0 %}active{% endif %}">
+                    <div class="row">
+                        {% for director in directors_data[index:index+3] %}
+                        <div class="col-md-4">
+                            <!-- Director Card -->
+                            <div class="card h-100 border-1 rounded shadow">
+                                <!-- Director Image -->
+                                <img src="{{ IMAGE_BASE_URL }}{{ director.image_filename }}" alt="{{ director.name }}"
+                                    class="card-img-top movie-image">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ director.name }}</h5>
+                                    <p class="card-text"><strong>Films Directed:</strong> {{ director.filmsDirected |
+                                        join(', ') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to trigger the carousel slides automatically
+    var movieCarousel = document.getElementById('movieCarousel');
+    var movieCarouselInstance = new bootstrap.Carousel(movieCarousel, {
+        interval: 1000, // Set the interval time in milliseconds (1 second in this case)
+        pause: false // To prevent pausing when hovering over the carousel
+    });
+</script>
+
+{% endblock %}
+

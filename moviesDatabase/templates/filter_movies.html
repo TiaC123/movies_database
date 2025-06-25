@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <h2>Filter Movies by Category</h2>
+
+    <form action="/filter_movies" method="get" class="row">
+        <label for="category">Enter Category:</label>
+        <div class="col-md-11">
+            <div class="form-group">
+                <input type="text" class="form-control" name="category" id="category">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <button type="submit" class="btn btn-danger">Filter</button>
+        </div>
+    </form>
+
+    {% if message %}
+    <p>{{ message }}</p>
+    {% elif data %}
+    <br>
+    <h3>Filtered Movies</h3>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr class="table-danger">
+                <th>Title</th>
+                <th>Release Year</th>
+                <th>Characters</th>
+                <th>Box Office</th>
+                <th>Runtime</th>
+                <th>Director</th>
+                <th>Producers</th>
+                <th>Categories</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in data %}
+            <tr>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.releaseYear }}</td>
+                <td>{{ movie.characters | join(', ') }}</td>
+                <td>{{ movie.boxOffice }}</td>
+                <td>{{ movie.runtime }}</td>
+                <td>{{ movie.director }}</td>
+                <td>{{ movie.producers | join(', ') }}</td>
+                <td>{{ movie.category | join(', ')}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>Please enter a category to filter movies.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

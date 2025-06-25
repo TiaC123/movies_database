@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Add a Movie</h2>
+    <form action="/add_movies" method="post">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" name="title" id="title" required>
+        </div>
+        <div class="form-group">
+            <label for="releaseYear">Release Year:</label>
+            <input type="number" class="form-control" name="releaseYear" id="releaseYear" required>
+        </div>
+        <div class="form-group">
+            <label for="characters">Characters:</label>
+            <input type="text" class="form-control" name="characters" id="characters" required>
+        </div>
+        <div class="form-group">
+            <label for="runtime">Runtime:</label>
+            <input type="number" class="form-control" name="runtime" id="runtime" required>
+        </div>
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <input type="text" class="form-control" name="category" id="category" required>
+        </div>
+        <div class="form-group">
+            <label for="producers">Producers:</label>
+            <input type="text" class="form-control" name="producers" id="producers" required>
+        </div>
+        <div class="form-group">
+            <label for="image_filename">Image Filename:</label>
+            <input type="text" class="form-control" name="image_filename" id="image_filename" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-danger">Add Movie</button>
+    </form>
+</div>
+{% endblock %}

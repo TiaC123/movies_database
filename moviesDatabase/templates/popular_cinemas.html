@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center mb-4">Highest Performing Cinemas in London</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                {% for cinema in cinemas %}
+                <div class="col">
+                    <div class="card h-100 border-danger text-center">
+                        <img src="{{ IMAGE_BASE_URL }}{{ cinema.image_filename }}" class="card-img-top movie-image" alt="{{ cinema.cinema_name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ cinema.cinema_name }}</h5>
+                            <p class="card-text">
+                                <strong>Location:</strong> {{ cinema.location.city }}, {{ cinema.location.country }}<br>
+                                <strong>Monthly Sales:</strong> £{{ cinema.monthly_sales }}<br>
+                                <strong>Amenities:</strong>
+                                <ul class="list-unstyled">
+                                    {% for amenity in cinema.amenities %}
+                                    <li><i class="fas fa-check me-1"></i>{{ amenity }}</li>
+                                    {% endfor %}
+                                </ul>
+                                <strong>Movies Shown:</strong>
+                                <ul class="list-unstyled">
+                                    {% for movie in movies %}
+                                    {% if movie.title in cinema.movies_shown %}
+                                    <li>{{ movie.title }}</li>
+                                    {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

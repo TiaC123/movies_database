@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h2 class="mb-4">Find Movie Titles</h2>
+  <p>Enter a keyword to search for movie titles containing that word. Press "Find Movies" to see the matching titles.
+    For best results, use specific movie titles.</p>
+  <form action="/find_title_elements" method="GET" class="mb-4">
+    <div class="input-group">
+      <input type="text" name="keyword" id="keyword" class="form-control" placeholder="Search for movie titles"
+        required>
+      <button type="submit" class="btn btn-danger">Find Movies</button>
+    </div>
+  </form>
+
+  {% if title_list %}
+  <div class="matching-titles">
+    <h2>Matching Movie Titles:</h2>
+    <p>{{ message }}</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for movie_dict in title_list %}
+      <div class="col">
+        <div class="card h-100 border-danger">
+          <img src="{{ IMAGE_BASE_URL }}{{ movie_dict['image_filename'] }}" class="card-img-top"
+            alt="{{ movie_dict['title'] }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ movie_dict['title'] }}</h5>
+            <p class="card-text"><strong>Release Year:</strong> {{ movie_dict['releaseYear'] }}</p>
+            <p class="card-text"><strong>Characters:</strong> {{ movie_dict['characters'] | join(', ') if movie_dict.get('characters') }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="no-matching-titles">
+      <p>{{ message }}</p>
+    </div>
+    {% endif %}
+  </div>
+  {% endblock %}

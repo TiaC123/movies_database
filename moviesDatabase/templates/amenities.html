@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container mt-4">
+        <h2 class="mb-4">Cinema Amenities</h2>
+        <p>The most popular cinema amenities are Arcade and Bar. Here are the cinemas with those elements:</p>
+
+        <div class="row">
+            {% for cinema in amenities %}
+                <div class="col-md-6">
+                    <div class="card border-danger mb-3 text-center">
+                        <img src="{{ IMAGE_BASE_URL }}{{ cinema.image_filename }}" class="card-img-top movie-image" alt="{{ cinema.cinema_name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">Cinema ID: {{ cinema.cinema_name }}</h5>
+                            <p class="card-text">
+                                <strong>Location:</strong> {{ cinema.location.city }}, {{ cinema.location.country }}
+                                <br>
+                                <strong>Amenities:</strong>
+                                <ul class="list-unstyled">
+                                    {% for amenity in cinema.amenities %}
+                                        <li>{{ amenity }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <p>Alternatively, you can select your own amenities</p>
+        <div class="container mt-4">
+            <h2>Find Cinemas by Amenities</h2>
+            <form action="/amenities" method="GET" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label>Select Amenities:</label><br>
+                    {% for amenity in unique_amenities %}
+                        <input type="checkbox" id="amenity_{{ amenity }}" name="amenity" value="{{ amenity }}">
+                        <label for="amenity_{{ amenity }}">{{ amenity }}</label><br>
+                    {% endfor %}
+                </div>
+                <br>
+                <button type="submit" class="btn btn-danger">Search</button>
+            </form>
+    
+            {% if input_amenities_cinemas %}
+                <h3 class="mt-4">Additional Cinemas with the specified amenities:</h3>
+                <ul class="list-group">
+                    {% for cinema in input_amenities_cinemas %}
+                        <li class="list-group-item">{{ cinema.cinema_name }} - {{ cinema.location.city }}, {{ cinema.location.country }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="mt-4">No additional cinemas found for the specified amenities.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const checkboxes = document.querySelectorAll('input[name="amenity"]:checked');
+            if (checkboxes.length < 2) {
+                alert("Please select at least two amenities.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+{% endblock %}

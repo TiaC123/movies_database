@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+        <h2>Latest Movies</h2>
+        <p>Below you can view our latest movies:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-danger">
+                    <th>Title</th>
+                    <th>Release Year</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in filtered_movies %}
+                <tr>
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.releaseYear }}</td>
+                    <td>{{ movie.category | join(', ') }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</div>
+&nbsp;
+<div class="container">
+    <h2>Superhero Movies Grouped by Release Year</h2>
+    <div>
+        {{ chart_html | safe }}
+    </div>
+</div>
+</div>
+{% endblock %}
